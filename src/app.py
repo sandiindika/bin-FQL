@@ -298,7 +298,7 @@ class MyApp():
                     "Gunakan semua fitur?", ["Yes", "No"], horizontal= True,
                     key= "Radio button untuk pilihan fitur"
                 )
-                choice_feature = True if choice_feature == "Yes" else False
+                choice_feature = True if choice_feature == "No" else False
                 if choice_feature:
                     features_selected = st.multiselect(
                         "Pilih fitur musik (multi)", feature_names,
@@ -311,7 +311,7 @@ class MyApp():
                     key= "Radio button untuk pilihan jenis genre"
                 )
 
-                choice_genre = True if choice_genre == "Yes" else False
+                choice_genre = True if choice_genre == "No" else False
                 if choice_genre:
                     labels_selected = st.multiselect(
                         "Pilih genre musik (multi)", df.iloc[:, -1].unique(),
